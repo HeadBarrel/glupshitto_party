@@ -16,6 +16,8 @@ max-cards: 3
 
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
+[? if grassroots + backing - expense <0 : We're currently experiencing a net loss, we need to have enough money by new year or we'll be bankrupt. ?]
+
 - @party
 - @govt
 - #advisor
@@ -39,6 +41,8 @@ max-cards: 4
 
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
+[? if grassroots + backing - expense <0 : We're currently experiencing a net loss, we need to have enough money by new year or we'll be bankrupt. ?]
+
 - @party
 - @govt
 - #advisor
@@ -53,9 +57,9 @@ is-deck: true
 - #party_affairs
 
 @govt
-title: Government Affairs
+title: Regional Affairs
 view-if: time >= 6
-card-image: img/reichstag_2.jpg
+card-image: img/Weimar_States.jpg
 is-deck: true
 
 - #govt_affairs

@@ -1,0 +1,65 @@
+title: Party Budget
+new-page: true
+is-card: false
+card-image: img/germanhyperinflation.jpg
+tags: party_affairs
+
+= Uh
+
+Since I moved the party budget to the right status I don't know what to do with this, itll be a dev menu for now.
+
+- @budget: Manage the Party's budget
+- @root: Cancel
+
+@budget
+
+- @addg: Add one grassroots
+- @removeg: Remove one grassroots
+- @addb: Add one backing
+- @removeb: Remove one backing
+- @adde: Add one expense
+- @removee: Remove one expense
+- @partybudget: Go back
+- @root: Cancel
+
+@addg
+on-arrival: grassroots += 1
+
+Ok.
+
+- @partybudget: Continue...
+
+@removeg
+on-arrival: grassroots -= 1
+
+Ok.
+
+- @partybudget: Continue...
+
+@addb
+on-arrival: backing += 1
+
+Ok.
+
+- @partybudget: Continue...
+
+@removeb
+on-arrival: backing -= 1
+
+Ok.
+
+- @partybudget: Continue...
+
+@adde
+on-arrival: expense += 1
+
+Ok.
+
+- @partybudget: Continue...
+
+@removee
+on-arrival: expense -= 1
+
+Ok.
+
+- @partybudget: Continue...

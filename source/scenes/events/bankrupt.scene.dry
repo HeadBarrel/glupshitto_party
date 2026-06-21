@@ -1,0 +1,16 @@
+title: We're bankrupt!
+subtitle: Our coffers are dried up...
+new-page: true
+tags: event
+view-if: resources <= -1
+
+= We're bankrupt!
+
+I'll add funny ways to make the budget balanced later.
+
+- @austerity: Oh okay cool.
+
+@austerity
+on-arrival: resources = 0; grassroots = 0; backing = 0; expense = 0
+
+We balanced the book using ancient techniques.

@@ -2,7 +2,9 @@ title: Status
 new-page: true
 is-special: true
 
-= Party Finance
+```{!<div style="text-align: center;">!}
+<h2><strong>Party Finance</strong></h2>
+{!</div>!}```
 
 Resources available: [+ resources +]
 
@@ -10,13 +12,17 @@ Grassroots: [+ grassroots : fundgrassroots +]
 
 Industrial Backing: [+ backing : fundbacking +]
 
-<h1>Incomes</h1>
+```{!<div style="text-align: center;">!}
+<h3>Incomes</h3>
+{!</div>!}```
 
 Grassroots: <span style="color: #008F26;">**[+ grassroots +]**</span>
 
 Industrial Backing: <span style="color: #008f26;">**[+ backing +]**</span>
 
-<h1>Expenses</h1>
+```{!<div style="text-align: center;">!}
+<h3>Expenses</h3>
+{!</div>!}```
 
 WIP: <span style="color: #8F0000;">**[+ expense +]**</span>
 
@@ -27,6 +33,8 @@ Balance: [? if grassroots + backing - expense >0 : <span style="color: #008F26;"
 @region
 view-if: spd_in_government = 1
 
-= Region Finance
+```{!<div style="text-align: center;">!}
+<h2><strong>Region Finance</strong></h2>
+{!</div>!}```
 
 Budget: [+ budget +]

@@ -1,4 +1,5 @@
 title: Election
+subtitle: Due to our minuscule size, we will be grouped with all the other small parties.
 on-arrival: {!
 // calculate normalized class voting amounts (0 to 100)
 for (var c of Q.classes) {

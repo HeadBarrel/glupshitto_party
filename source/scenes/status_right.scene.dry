@@ -1,0 +1,32 @@
+title: Status
+new-page: true
+is-special: true
+
+= Party Finance
+
+Resources available: [+ resources +]
+
+Grassroots: [+ grassroots : fundgrassroots +]
+
+Industrial Backing: [+ backing : fundbacking +]
+
+= Incomes
+
+Grassroots: <span style="color: #008F26;">**[+ grassroots +]**</span>
+
+Industrial Backing: <span style="color: #008f26;">**[+ backing +]**</span>
+
+= Expenses
+
+WIP: <span style="color: #8F0000;">**[+ expense +]**</span>
+
+= Total
+
+Balance: [? if grassroots + backing - expense >0 : <span style="color: #008F26;">**+[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense <0 : <span style="color: #8F0000;">**[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense =0 : <span style="color: #baba04;">**[+ grassroots + backing - expense +]**</span> ?]
+
+@region
+view-if: spd_in_government = 1
+
+= Region Finance
+
+Budget: [+ budget +]

@@ -13,7 +13,7 @@ Grassroots: [+ grassroots : fundgrassroots +]
 Industrial Backing: [+ backing : fundbacking +]
 
 ```{!<div style="text-align: center;">!}
-<h3>Incomes</h3>
+<h2><strong>Incomes</strong></h2>
 {!</div>!}```
 
 Grassroots: <span style="color: #008F26;">**[+ grassroots +]**</span>
@@ -26,7 +26,9 @@ Industrial Backing: <span style="color: #008f26;">**[+ backing +]**</span>
 
 WIP: <span style="color: #8F0000;">**[+ expense +]**</span>
 
-<h1>Total</h1>
+```{!<div style="text-align: center;">!}
+<h2><strong>Total</strong></h2>
+{!</div>!}```
 
 Balance: [? if grassroots + backing - expense >0 : <span style="color: #008F26;">**+[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense <0 : <span style="color: #8F0000;">**[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense =0 : <span style="color: #baba04;">**[+ grassroots + backing - expense +]**</span> ?]
 

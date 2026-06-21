@@ -181,7 +181,7 @@
   };
 
   // TODO: have some code for tabbed sidebar browsing.
-      window.updateSidebar = function () {
+    window.updateSidebar = function () {
         $('#qualities').empty();
         var statusScene = dendryUI.game.scenes["status"];
         var scene = dendryUI.game.scenes[window.statusTab];
@@ -203,7 +203,7 @@
         dendryUI.dendryEngine._runActions(scene.onDisplay);
     };
 
-  window.changeTab = function (newTab, tabId, isRight) {
+    window.changeTab = function (newTab, tabId, isRight) {
         if (tabId == 'poll_tab_left' && dendryUI.dendryEngine.state.qualities.historical_mode) {
             window.alert('Polls are not available in historical mode.');
             return;

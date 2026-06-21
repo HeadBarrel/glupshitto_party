@@ -1,0 +1,17 @@
+title: Finance
+is-pinned-card: true
+tags: advisor
+card-image: img/Ein-Millionen-Markschein.jpg
+new-page: true 
+
+= Finance
+
+While money can't buy happiness, it certainly keeps us away from misery.
+
+- @party
+- @root: Return to main
+
+@party
+title: Party Finance
+subtitle: Manage your party finance.
+go-to: partybudget

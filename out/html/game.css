@@ -570,6 +570,11 @@ table {
 .seat.dvp {
     fill: #D5AC27;
 }
+.seat.gp {
+    fill: #FF46A2;
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
+}
 .seat.other {
     fill: #909090;
   stroke: var(--border-color);

@@ -105,7 +105,7 @@ go-to: coalition_menu
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0; outline: 2px; outline-style': solid;> </div> !} **Others**: {!</td><td>!} **[+ other_r +]%** {!</td><td>!} **[+ str_change_other +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FF69B4; outline: 2px; outline-style': solid;> </div> !} **Glupshitto Party**: {!</td><td>!} **[+ gp_r +]%** {!</td><td>!} **[+ str_change_gp +]** {!</td></tr>!}
 {!</table>!}
 
 There is, of course, only one formable government.

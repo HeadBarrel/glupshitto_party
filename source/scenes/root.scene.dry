@@ -310,6 +310,7 @@ Q.dvp_r = 10;
 Q.dnvp_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
+Q.gp_r = 0;
 
 // diff from prev
 Q.old_spd_r = 26;
@@ -320,6 +321,7 @@ Q.old_dvp_r = 10;
 Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
+Q.old_gp_r = 0;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;

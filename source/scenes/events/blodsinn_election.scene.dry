@@ -125,7 +125,7 @@ As expected, we have formed a majority government.
 
 John Party has been selected as Minister-President.
 
-@whathefuck
+@whatthefuck
 title: There is no clear governing majority.
 subtitle: Wait what?
 view-if: gp_r < 50

@@ -1,0 +1,134 @@
+title: Blödsinn Elections
+new-page: true
+tags: event
+priority: 2
+view-if: (year = next_election_year_blodsinn and month >= next_election_month_blodsinn) or (year > next_election_year_blodsinn)
+on-arrival: spd_prussia = 0;
+on-departure: month_actions += 1; in_election_blodsinn = 0; next_election_year_blodsinn = next_election_year_blodsinn + 4; n_elections_blodsinn += 1; next_election_time_blodsinn = time + 48;
+set-jump: post_blodsinn_election
+face-image: img/Glupshitto.jpg
+
+= Elections, [+ month : month +] [+ year +]
+
+The Blödsinn elections are to be held now.
+
+- @election_algorithm_blodsinn: May we do our best...
+
+@post_blodsinn_election
+on-arrival: {!
+// set old results
+// election threshold constitutional reform
+// banning parties
+var new_party_sum = 0;
+for (var party of Q.parties) {
+    Q['old_' + party + '_r'] = Q[party + '_r'];
+    if (Q.constitutional_reform > 0) {
+        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned']) {
+            Q[party + '_r'] = 0;
+        } else {
+            Q[party + '_r'] = Q[party + '_votes'];
+        }
+        new_party_sum += Q[party + '_r'];
+    } else {
+        Q[party + '_r'] = Q[party + '_votes'];
+    }
+    // if we use decimals, then we might want to truncate the numbers
+    if (Q.use_decimals) {
+        Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
+    }  else {
+            Q[party + '_r_disp'] = Q[party+'_r'];
+    }
+    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
+    var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
+    Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
+}
+// calculate new party sum if electoral reform
+if (Q.electoral_threshold && Q.electoral_threshold > 0) {
+    for (var party of Q.parties) {
+        if (Q[party + '_r'] > 0) {
+            if (Q.use_decimals) {
+                Q[party + '_r'] = Math.round(Q[party + '_r']*1000/new_party_sum)/10;
+            } else {
+                Q[party + '_r'] = Math.round(Q[party + '_r']*100/new_party_sum);
+            }
+        }
+        if (Q.use_decimals) {
+            Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
+        } else {
+            Q[party + '_r_disp'] = Q[party+'_r'];
+        }
+        Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
+        var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
+        Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
+    }
+}
+
+Q.spd_in_government = 0;
+
+var election_result = {'date': new Date(Q.year, Q.month - 1)};
+for (var party of Q.parties) {
+    election_result[party] = Q[party + '_r'];
+}
+Q.election_records.push(election_result);
+!}
+on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
+on-display: {!
+data = [
+    {
+        "id": "gp",
+        "legend": "GP",
+        "name": "GP",
+        "seats": Math.round(Q.gp_r*0.3),
+    }
+];
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<tr><td><div class="box" style='background-color:#a0a0a0; outline: 2px; outline-style': solid;> </div> !} **Others**: {!</td><td>!} **[+ other_r +]%** {!</td><td>!} **[+ str_change_other +]** {!</td></tr>!}
+{!</table>!}
+
+There is, of course, only one formable government.
+
+@coalition_menu
+
+- @gp_majority
+- @whatthefuck
+
+@gp_majority
+title: Glupshitto majority alone
+subtitle: GP: [+ gp_r +]%
+view-if: gp_r >= 50
+on-arrival: chancellor = "Wels"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; spd_prussia = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+
+As expected, we have formed a majority government.
+
+John Party has been selected as Minister-President.
+
+@whathefuck
+title: There is no clear governing majority.
+subtitle: Wait what?
+view-if: gp_r < 50
+call: set_next_election_time_blodsinn
+
+<img src="img/shocked_dog.png">

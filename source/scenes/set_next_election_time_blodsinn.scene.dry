@@ -1,0 +1,2 @@
+title: next election time blodsinn
+on-arrival: next_election_time_blodsinn = time+time_to_election if next_election_time_blodsinn >= time+time_to_election; next_election_month_blodsinn = month + 3 if next_election_time_blodsinn >= time+time_to_election; next_election_year_blodsinn = year if next_election_time_blodsinn >= time+time_to_election; next_election_year_blodsinn += 1 if next_election_month_blodsinn > 12; next_election_month_blodsinn -= 12 if next_election_month_blodsinn > 12; 

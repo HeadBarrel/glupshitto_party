@@ -2,9 +2,7 @@ title: Status
 new-page: true
 is-special: true
 
-```{!<div style="text-align: center;">!}
-<h2><strong>Party Finance</strong></h2>
-{!</div>!}```
+= Party Finance
 
 Resources available: [+ resources +]
 
@@ -12,31 +10,23 @@ Grassroots: [+ grassroots : fundgrassroots +]
 
 Industrial Backing: [+ backing : fundbacking +]
 
-```{!<div style="text-align: center;">!}
-<h2><strong>Incomes</strong></h2>
-{!</div>!}```
+= Incomes
 
 Grassroots: <span style="color: #008F26;">**[+ grassroots +]**</span>
 
 Industrial Backing: <span style="color: #008f26;">**[+ backing +]**</span>
 
-```{!<div style="text-align: center;">!}
-<h2><strong>Expenses</strong></h2>
-{!</div>!}```
+= Expenses
 
 WIP: <span style="color: #8F0000;">**[+ expense +]**</span>
 
-```{!<div style="text-align: center;">!}
-<h2><strong>Total</strong></h2>
-{!</div>!}```
+= Total
 
 Balance: [? if grassroots + backing - expense >0 : <span style="color: #008F26;">**+[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense <0 : <span style="color: #8F0000;">**[+ grassroots + backing - expense +]**</span> ?] [? if grassroots + backing - expense =0 : <span style="color: #baba04;">**[+ grassroots + backing - expense +]**</span> ?]
 
 @region
 view-if: spd_in_government = 1
 
-```{!<div style="text-align: center;">!}
-<h2><strong>Region Finance</strong></h2>
-{!</div>!}```
+=Region Finance
 
 Budget: [+ budget +]

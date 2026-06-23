@@ -25,7 +25,7 @@ Since I moved the party budget to the right status I don't know what to do with 
 - @root: Cancel
 
 @res
-on-arrival: resource += 999
+on-arrival: resources += 999
 
 Ok.
 

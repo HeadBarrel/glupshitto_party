@@ -606,13 +606,14 @@ For more information on the politics and government of the German Republic, see 
 - @1928_hard: Begin (hard difficulty)
 - @1928_historical: Begin (historical mode)
 - @developer: Turn on devmode
+- @off: Turn off devmode
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5; grassroots = 3; devmode = 0
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5; grassroots = 3
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 2; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3; grassroots = 1; backing = 1; devmode = 0
+on-arrival: difficulty = 1; resources = 2; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3; grassroots = 1; backing = 1
 go-to: 1928_main
 
 @1928_historical
@@ -633,13 +634,18 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 Q.grassroots = 1;
 Q.backing = 0;
-Q.devmode = 0;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
 
 @developer
+view-if: devmode = 0
 on-arrival: devmode = 1
+go-to: start
+
+@developer
+view-if: devmode = 1
+on-arrival: devmode = 0
 go-to: start
 
 @1928_main

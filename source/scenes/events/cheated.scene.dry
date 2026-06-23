@@ -1,0 +1,17 @@
+title: You Cheated
+new-page: true
+tags: event
+priority: 10
+view-if: resource >= 100
+
+<img src="img/yuri.gif">
+
+- @what: What?
+- @nah: Can I keep cheating?
+
+@what
+on-arrival: resource = 0;
+
+@nah
+
+Okay sure.

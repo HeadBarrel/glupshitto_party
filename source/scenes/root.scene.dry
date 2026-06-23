@@ -643,7 +643,7 @@ view-if: devmode = 0
 on-arrival: devmode = 1
 go-to: start
 
-@developer
+@off
 view-if: devmode = 1
 on-arrival: devmode = 0
 go-to: start

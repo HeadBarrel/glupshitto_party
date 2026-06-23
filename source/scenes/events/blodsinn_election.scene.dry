@@ -10,6 +10,8 @@ face-image: img/Glupshitto.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
+Blödsinn is a small state, so small in fact that other parties don't even bother registering for the Landtag, it's just us here.
+
 The Blödsinn elections are to be held now.
 
 - @election_algorithm_blodsinn: May we do our best...
@@ -64,6 +66,8 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 }
 
 Q.spd_in_government = 0;
+Q.gp_r = 100;
+Q.election_records.push(election_result);
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {

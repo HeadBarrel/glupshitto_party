@@ -79,8 +79,8 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "GP",
-        "legend": "Glupshitto",
+        "id": "gp",
+        "legend": "GP",
         "name": "GP",
         "seats": Math.round(Q.gp_r*0.3),
     }

@@ -2,7 +2,7 @@ title: You Cheated
 new-page: true
 tags: event
 priority: 10
-view-if: (resources >= 100) or (budget >= 100)
+view-if: allowcheat = 0; (resources >= 100) or (budget >= 100)
 
 <img src="img/yuri.gif">
 
@@ -13,5 +13,6 @@ view-if: (resources >= 100) or (budget >= 100)
 on-arrival: resources = 0 if resources >= 100; budget = 0 if budget >= 100;
 
 @nah
+on-arrival: allowcheat = 1;
 
 Okay sure.

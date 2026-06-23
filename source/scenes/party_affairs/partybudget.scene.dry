@@ -13,6 +13,8 @@ Since I moved the party budget to the right status I don't know what to do with 
 
 @budget
 
+- @res: Add a bunch of resources
+- @bud: Add a bunch of budget
 - @addg: Add one grassroots
 - @removeg: Remove one grassroots
 - @addb: Add one backing
@@ -21,6 +23,16 @@ Since I moved the party budget to the right status I don't know what to do with 
 - @removee: Remove one expense
 - @partybudget: Go back
 - @root: Cancel
+
+@res
+on-arrival: resource += 999
+
+Ok.
+
+@bud
+on-arrival: budget += 999
+
+Ok.
 
 @addg
 on-arrival: grassroots += 1

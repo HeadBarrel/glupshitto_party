@@ -1,0 +1,19 @@
+title: Devmode
+new-page: true
+tags: advisor
+is-pinned-card: true
+is-card: false
+view-if: devmode = 1
+card-image: img/Ein-Millionen-Markschein.jpg
+
+= Devmode
+
+For me to mess with stuff
+
+- @party
+- @easy_discard
+
+@party
+title: Party Finance
+subtitle: Manage your party finance.
+go-to: partybudget

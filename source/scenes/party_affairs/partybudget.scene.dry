@@ -4,9 +4,7 @@ is-card: false
 card-image: img/germanhyperinflation.jpg
 tags: party_affairs
 
-= Uh
-
-Since I moved the party budget to the right status I don't know what to do with this, itll be a dev menu for now.
+= Dev Console
 
 - @budget: Manage the Party's budget
 - @root: Cancel
@@ -29,10 +27,14 @@ on-arrival: resources += 999
 
 Ok.
 
+- @partybudget: Continue...
+
 @bud
 on-arrival: budget += 999
 
 Ok.
+
+- @partybudget: Continue...
 
 @addg
 on-arrival: grassroots += 1

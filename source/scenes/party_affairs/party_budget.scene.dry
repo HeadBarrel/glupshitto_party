@@ -1,8 +1,6 @@
 title: Party Budget
 new-page: true
 is-card: false
-choose-if: finance_timer <= 0
-unavailable-subtitle: We have change our budget too recently, wait for [+ finance_timer +] months.
 on-arrival: month_actions += 1; finance_timer = 4
 card-image: img/germanhyperinflation.jpg
 tags: party_affairs

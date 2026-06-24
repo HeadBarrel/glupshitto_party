@@ -8,10 +8,10 @@ card-image: img/Ein-Millionen-Markschein.jpg
 
 Here you can manage your party.
 
-- @party_budget
+- @party_b
 - @easy_discard
 
-@party_budget
+@party_b
 title: Party Finance
 subtitle: Manage your party finance.
 choose-if: finance_timer <= 0

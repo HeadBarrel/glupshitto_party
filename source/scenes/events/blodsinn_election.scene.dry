@@ -138,4 +138,6 @@ subtitle: Wait what?
 view-if: gp_r < 50
 call: set_next_election_time_blodsinn
 
+{!<div style="text-align: center;">!}
 <img src="img/shocked_dog.png">
+{!</div>!}

@@ -24,6 +24,6 @@ go-to: fundraising
 - @budget: Go back
 
 @beg
-on-arrival: backing += 1; resources += 1; left_dissent -= 8;
+on-arrival: backing += 1; resources += 1; left_dissent += 8;
 
 This give us more resources to play with, some members aren't too happy we're selling out to the capitalists though.

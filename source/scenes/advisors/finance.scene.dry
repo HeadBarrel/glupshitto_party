@@ -8,10 +8,12 @@ card-image: img/Ein-Millionen-Markschein.jpg
 
 Here you can manage your party.
 
-- @party
+- @party_budget
 - @easy_discard
 
-@party
+@party_budget
 title: Party Finance
 subtitle: Manage your party finance.
+choose-if: finance_timer <= 0
+unavailable-subtitle: We have change our budget too recently, wait for [+ finance_timer +] months.
 go-to: party_budget

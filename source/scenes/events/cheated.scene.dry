@@ -4,7 +4,9 @@ tags: event
 priority: 10
 view-if: allowcheat = 0 and (resources >= 100) or (budget >= 100)
 
+{!<div style="text-align: center;">!}
 <img src="img/yuri.gif">
+{!/div>!}
 
 - @what: What?
 - @nah: Can I keep cheating?

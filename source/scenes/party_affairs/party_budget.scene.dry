@@ -1,0 +1,29 @@
+title: Party Budget
+new-page: true
+is-card: false
+card-image: img/germanhyperinflation.jpg
+tags: party_affairs
+
+= Party Budget
+
+- @budget: Manage the Party's budget
+- @root: Cancel
+
+@budget
+
+- @fundraise: Manage fundraising dues
+- @industry: Manage industrial backing
+- @party_budget: Go back
+
+@fundriase
+go-to: fundraising
+
+@industry
+
+- @beg: Secure more backing
+- @budget: Go back
+
+@beg
+on-arrival: backing += 1; resources += 1; left_dissent -= 8;
+
+This give us more resources to play with, some members aren't too happy we're selling out to the capitalists though.

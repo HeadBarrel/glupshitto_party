@@ -9,7 +9,7 @@ card-image: img/Ein-Millionen-Markschein.jpg
 Here you can manage your party.
 
 - @party_b
-- @easy_discard
+- @root: Return to main
 
 @party_b
 title: Party Finance

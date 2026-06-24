@@ -15,7 +15,7 @@ tags: party_affairs
 - @industry: Manage industrial backing
 - @party_budget: Go back
 
-@fundriase
+@fundraise
 go-to: fundraising
 
 @industry

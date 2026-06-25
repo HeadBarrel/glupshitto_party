@@ -10,7 +10,7 @@ new-page: true
 
 Here you can manage Blödsinn government.
 
-- #cabinet
+- #govt_affairs
 - @back: Return to main
 
 @back

@@ -43,11 +43,18 @@ max-cards: 4
 
 [? if grassroots + backing - expense <0 : We're currently experiencing a net loss, we need to have enough money by new year or we'll be bankrupt. ?]
 
+- @personal
 - @party
 - @govt
 - #advisor
 - @shuffle_leadership_pinned
 
+@personal
+title: Personal Affairs
+card-image: img/fries.jpg
+is-deck: true
+
+- #personal_events
 
 @party
 title: Party Affairs

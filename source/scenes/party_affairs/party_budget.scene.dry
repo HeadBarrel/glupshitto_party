@@ -2,7 +2,7 @@ title: Party Budget
 new-page: true
 is-card: false
 on-arrival: month_actions += 1; finance_timer = 4
-view-if: finance_timer = 0
+view-if: finance_timer <= 0
 card-image: img/germanhyperinflation.jpg
 tags: party_affairs
 

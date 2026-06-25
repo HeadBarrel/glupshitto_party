@@ -1,14 +1,14 @@
-title: Cabinet
+title: The Region
 is-pinned-card: true
 tags: advisor
-card-image: img/muller_cabinet.jpg
-view-if: difficulty < 0 and spd_in_government and chancellor_party = "SPD"
+card-image: img/Glupshitto.jpg
+view-if: spd_in_government = 1
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
-= Cabinet
+= The Region
 
-With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
+Here you can manage Blödsinn government.
 
 - #cabinet
 - @back: Return to main

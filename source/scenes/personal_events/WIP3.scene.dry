@@ -1,6 +1,7 @@
 title: WIP
 new-page: true
 is-card: true
+on-arrival: month_actions += 1;
 tags: personal_events
 
 = WIP

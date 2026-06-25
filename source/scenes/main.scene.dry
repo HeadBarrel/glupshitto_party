@@ -51,7 +51,7 @@ max-cards: 4
 
 @personal
 title: Personal Affairs
-card-image: img/fries.jpg
+card-image: img/furies.jpg
 is-deck: true
 
 - #personal_events

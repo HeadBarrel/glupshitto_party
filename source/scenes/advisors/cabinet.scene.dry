@@ -1,7 +1,7 @@
 title: The Region
 is-pinned-card: true
 tags: advisor
-card-image: img/Glupshitto.jpg
+card-image: img/assembly.jpeg
 view-if: spd_in_government = 1
 on-arrival: last_cabinet_action = 1
 new-page: true 

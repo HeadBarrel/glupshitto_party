@@ -18,6 +18,7 @@ max-cards: 3
 
 [? if grassroots + backing - expense <0 : We're currently experiencing a net loss, we need to have enough money by new year or we'll be bankrupt. ?]
 
+- @personal
 - @party
 - @govt
 - #advisor
